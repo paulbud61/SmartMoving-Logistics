@@ -161,13 +161,32 @@
       }
       /* Responsive Design */
 
-      @media (max-width: 768px) {
-         .table-container {
-          max-width: 700px;
-          min-width: 280px;
+     
+       @media (max-width: 768px) {
+  .table-container {
+    max-width: 70%;
+    min-width: 280px;
+    margin: 0 auto;
+  }
 
-         }
-      }
+  .table-1 {
+    overflow-x: auto; /* Activează scroll-ul orizontal doar pentru tabelul mare */
+    display: block; /* Asigură că tabelul ocupă spațiul și scroll-ul funcționează */
+  }
+
+  .table-1 table {
+    width: 100%; /* Asigură că tabelul se ajustează la dimensiunea containerului */
+  }
+
+  table th,
+  table td {
+    padding: 5px;
+    font-size: 12px; /* Diminuează dimensiunea fontului pentru a fi mai compact */
+  }
+}
+
+
+      
 
       /* Adjustments for larger screens (laptops and PCs) */
       @media (min-width: 1024px) {
@@ -258,7 +277,7 @@
     </p>
 
     <div class="table-container">
-      <table border="1" cellpadding="5" cellspacing="0">
+      <table class="table-1" border="1" cellpadding="5" cellspacing="0">
         <tr>
           <th>Denumire Serviciu</th>
           <th>Program Normal</th>
