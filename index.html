@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Base Styling */
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      body h1 {
+        text-align: center;
+      }
+
+      /* Header Styling */
+      header {
+        background-color: #ffffff;
+        padding: 20px;
+        border-bottom: 2px solid #e5e5e5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      header img {
+        width: 150px;
+      }
+
+      header h1 {
+        color: #333;
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+        flex: 1 1 100%;
+      }
+
+      /* Paragraphs */
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Client List */
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .partners-list {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 90%; /* Center gallery and make it responsive */
+        display: flex;
+      }
+
+      .partners > h2 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      ul li {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      ul img {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        border: 2px solid #333;
+      }
+
+      /* Tables */
+      table {
+        max-width: 1500px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        overflow: scroll;
+        display: table;
+        margin-bottom: 50px;
+        min-width: 20px;
+      }
+
+      
+
+      table th,
+      table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      table th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      table tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      /* Gallery */
+      .list-gallery {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 90%;
+      }
+
+      .gallery {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      footer h1,
+      footer h2 {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      footer p {
+        color: #ddd;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      /* Responsive Design */
+
+      @media (max-width: 768px) {
+         .table-container {
+          max-width: 700px;
+          min-width: 280px;
+
+         }
+      }
+
+      /* Adjustments for larger screens (laptops and PCs) */
+      @media (min-width: 1024px) {
+        p {
+          font-size: 18px; /* Increase font size for better readability */
+        }
+
+        ul h2 {
+          font-size: 24px;
+        }
+
+        ul li {
+          font-size: 18px;
+        }
+
+        header h1 {
+          font-size: 28px;
+        }
+
+        table th,
+        table td {
+          padding: 5px;
+          font-size: 14px;
+        }
+
+        footer p {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        body h1 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 20px; /* Further increase font size for large screens */
+        }
+
+        ul h2 {
+          font-size: 50px;
+          margin-bottom: 50px;
+        }
+
+        ul li {
+          font-size: 40px;
+          margin-bottom: 80px;
+          display: inline-block;
+          margin-left: 50px;
+        }
+
+        ul img {
+          margin-top: 40px;
+          max-width: 500px;
+        }
+
+        header h1 {
+          font-size: 32px;
+        }
+        table {
+          width: 70%; /* Ensure table fits within small screens */
+        }
+
+        .gallery {
+          max-width: 300px;
+        }
+
+        footer p {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./image/logo_smartmoving.png" alt="" />
+    <h1>SmartMoving Logistic Emails</h1>
+    <p>
+      <b>Smartmoving Logistics</b> is a trusted moving company with over
+      <b>15 years of experience</b>
+      in the industry. We provide <b>comprehensive</b> moving services,
+      <b>both locally and internationally</b>, ensuring the safe and efficient
+      relocation of your belongings. Our fleet includes a wide range of vehicles
+      of all sizes and types, allowing us to handle any moving challenge. We
+      adhere to <b>international packing standards</b>, using high-quality
+      materials to protect your valuable items during transit. Whether you are
+      moving within the same city or to another country, our professional team
+      is here to support you every step of the way. Contact us today to learn
+      more about our services and receive a free estimate.
+    </p>
+
+    <div class="table-container">
+      <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <th>Denumire Serviciu</th>
+          <th>Program Normal</th>
+          <th>Noapte/Weekend</th>
+          <th>Shuttle</th>
+          <th>Heavy Items (+200KG, Above 2nd Floor)</th>
+        </tr>
+        <tr>
+          <td>At Origin Full Service (Packing Materials Incl.)</td>
+          <td>50 € + VAT/19% per CBM</td>
+          <td>75 EUR + VAT 19% per CBM</td>
+          <td>100 EUR + VAT 19% PER 20 CBM</td>
+          <td>+ 50 EUR/Item per Floor LUL</td>
+        </tr>
+        <tr>
+          <td>At Origin Full Service (No Packing Materials)</td>
+          <td>40 € + VAT 19% per CBM</td>
+          <td>60 EUR + VAT 19% per CBM</td>
+          <td>100 EUR + VAT 19% PER 20 CBM</td>
+          <td>+ 50 EUR/Item per Floor LUL</td>
+        </tr>
+        <tr>
+          <td>At Origin Partial (No Packing, Only Truck Load)</td>
+          <td>25 € + VAT 19% per CBM</td>
+          <td>40 EUR + VAT 19% per CBM</td>
+          <td>100 EUR + VAT 19% PER 20 CBM</td>
+          <td>+ 50 EUR/Item per Floor LUL</td>
+        </tr>
+        <tr>
+          <td>
+            Destination Full Service (Delivery, Unpacking, Debris Removal,
+            Furniture Reassembly)
+          </td>
+          <td>35 € + VAT 19% per CBM</td>
+          <td>50 EUR + VAT 19% per CBM</td>
+          <td>100 EUR + VAT 19% PER 20 CBM</td>
+          <td>+ 50 EUR/Item per Floor LUL</td>
+        </tr>
+        <tr>
+          <td>Destination Partial Service (Only Delivery, No Unpacking)</td>
+          <td>25 € + VAT per CBM</td>
+          <td>40 EUR + VAT 19% per CBM</td>
+          <td>100 EUR + VAT 19% PER 20 CBM</td>
+          <td>+ 50 EUR/Item per Floor LUL</td>
+        </tr>
+      </table>
+
+      <table border="1">
+        <tr>
+          <th>Service</th>
+          <th>During Business Hours</th>
+          <th>Weekend/Night (Outside Business Hours)</th>
+          <th>Very Heavy Items</th>
+        </tr>
+        <tr>
+          <td>Packing, Security, Disassembly, Manual Handling Labor</td>
+          <td>25 EUR + 19% VAT / Operator / Hour</td>
+          <td>35 EUR + 19% VAT / Operator / Hour</td>
+          <td>50 EUR + 19% VAT / Operator / Hour</td>
+        </tr>
+      </table>
+
+      <table border="1">
+        <tr>
+          <th>Volume</th>
+          <th>Storage</th>
+          <th>Handling</th>
+          <th>Cost per CBM</th>
+        </tr>
+        <tr>
+          <td>Over 5 CBM</td>
+          <td>50 EUR + VAT 19% / Room Monthly</td>
+          <td>50 EUR + VAT 19%</td>
+          <td>5 EUR/CBM</td>
+        </tr>
+        <tr>
+          <td>Between 5-20 CBM</td>
+          <td></td>
+          <td></td>
+          <td>6,5 EUR/CBM</td>
+        </tr>
+        <tr>
+          <td>20-45 CBM</td>
+          <td></td>
+          <td></td>
+          <td>6 EUR/CBM</td>
+        </tr>
+        <tr>
+          <td>45-90 CBM</td>
+          <td></td>
+          <td></td>
+          <td>6 EUR/CBM</td>
+        </tr>
+        <tr>
+          <td>Over 90 CBM</td>
+          <td></td>
+          <td></td>
+          <td>5 EUR/CBM</td>
+        </tr>
+      </table>
+    </div>
+
+    <ul class="list-gallery">
+      <li><img class="gallery" src="./image/1.png" alt="" /></li>
+      <li><img class="gallery" src="./image/2.png" alt="" /></li>
+      <li><img class="gallery" src="./image/3.png" alt="" /></li>
+      <li><img class="gallery" src="./image/4.png" alt="" /></li>
+      <li><img class="gallery" src="./image/5.png" alt="" /></li>
+      <li><img class="gallery" src="./image/6.png" alt="" /></li>
+      <li><img class="gallery" src="./image/7.png" alt="" /></li>
+      <li><img class="gallery" src="./image/8.png" alt="" /></li>
+    </ul>
+
+    <div class="partners">
+      <h2>Our Clients</h2>
+      <ul class="partners-list">
+        <li>Bosch <img src="./firme partenere/client-1.png" alt="" /></li>
+        <li>SAP <img src="./firme partenere/client-8.png" alt="" /></li>
+        <li>Yardi <img src="./firme partenere/client-5.png" alt="" /></li>
+        <li>
+          Santa Fe Relo
+          <img
+            src="./firme partenere/santa-fe-relocation-services-srl-bucharest.jpg"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li>
+          AGS Relocation <img src="./firme partenere/mobile_logo.png" alt="" />
+        </li>
+        <li>
+          Christ-Logistik
+          <img src="./firme partenere/Logistik-Icon.png" alt="" />
+        </li>
+        <li>
+          Nobilia <img src="./firme partenere/nobilia-Logo-400x.png" alt="" />
+        </li>
+        <li>Steelcase <img src="./firme partenere/images.png" alt="" /></li>
+        <li>Pedralli <img src="./firme partenere/image.png" alt="" /></li>
+        <li>
+          Deloitte <img src="./firme partenere/deloitte-logo-1.jpg" alt="" />
+        </li>
+        <li>E-on <img src="./firme partenere/logo_eon1.png" alt="" /></li>
+        <li>Bombardier <img src="./firme partenere/client-4.png" alt="" /></li>
+      </ul>
+    </div>
+
+    <footer>
+      <h1>CONTACT</h1>
+      <h2>Adresa</h2>
+      <a style="color: white;" href="https://maps.app.goo.gl/Ff4fkYPvE5TGwKGu7">400683 Strada Câmpului nr.251, Cluj-Napoca, România.</p></a><p>
+      <h2>Numar Telefon</h2>
+      <p><a style="color: white;" href="tel:+40738.130.703">+40738.130.703</a></p>
+      <p><a style="color: white;" href="tel:+40740.835.055">+40740.835.055</a></p>
+      <h2>Email</h2>
+      <p><a style="color: white;" href="mailto:office@smartmoving.eu">office@smartmoving.eu</a></p>
+      <p>
+        © Copyright Smartmoving Logistics. All Rights Reserved Made by
+        OvidiuMaier & PaulBud
+      </p>
+    </footer>
+  </body>
+</html>
