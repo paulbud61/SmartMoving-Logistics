@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SmartMoving Logistic Emails</title>
     <style>
       /* Base Styling */
       body {
@@ -15,10 +15,9 @@
       }
 
       * {
-  transition: all 0.3s ease;
-}
+        transition: all 0.5s ease;
+      }
 
-      
       body h1 {
         text-align: center;
       }
@@ -38,12 +37,103 @@
         width: 150px;
       }
 
-      header h1 {
+      header nav ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      header nav ul li {
+        list-style: none;
+      }
+
+      header nav ul li a {
+        text-decoration: none;
         color: #333;
-        font-size: 24px;
-        margin: 0;
-        text-align: center;
-        flex: 1 1 100%;
+        font-size: 16px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      header nav ul li a:hover {
+        color: #4caf50;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .menu-icon div {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+      }
+
+      /* Mobile menu hidden */
+      .mobile-menu {
+        display: none;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        padding: 50px 20px;
+      }
+
+      .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .mobile-menu ul li {
+        margin: 20px 0;
+      }
+
+      .mobile-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      /* Close button for mobile menu */
+      .mobile-menu .close-btn {
+        position: absolute;
+        top: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+        }
+
+        .menu-icon {
+          display: flex;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        header nav ul li a {
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        header nav ul li a {
+          font-size: 20px;
+        }
+
+        .logo img {
+          width: 200px;
+        }
       }
 
       /* Paragraphs */
@@ -57,45 +147,6 @@
         margin-right: auto;
       }
 
-      /* Client List */
-      ul {
-        list-style: none;
-        padding: 0;
-        text-align: center;
-        margin: 0 auto;
-      }
-
-      .partners-list {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 20px auto;
-        max-width: 90%; /* Center gallery and make it responsive */
-        display: flex;
-      }
-
-      .partners > h2 {
-        font-size: 20px;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      ul li {
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
-
-      ul img {
-        display: block;
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto;
-        border: 2px solid #333;
-      }
-
       /* Tables */
       table {
         max-width: 1500px;
@@ -103,13 +154,8 @@
         border-collapse: collapse;
         background-color: #fff;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        /* overflow: scroll; */
-        display: table;
         margin-bottom: 50px;
-        min-width: 20px;
       }
-
-      
 
       table th,
       table td {
@@ -135,6 +181,7 @@
         justify-content: center;
         margin: 20px auto;
         max-width: 90%;
+        list-style: none;
       }
 
       .gallery {
@@ -143,6 +190,37 @@
         height: auto;
         border-radius: 5px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Partners */
+      .partners {
+        margin: 40px auto;
+        text-align: center;
+      }
+
+      .partners h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .partners-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .partners-list li {
+        list-style: none;
+        width: 150px;
+      }
+
+      .partners-list img {
+        width: 100%;
+        height: auto;
+        border: none;
       }
 
       /* Footer */
@@ -164,128 +242,105 @@
         font-size: 16px;
         margin-bottom: 10px;
       }
-      /* Responsive Design */
 
-     
-       @media (max-width: 768px) {
-  .table-container {
-    max-width: 70%;
-    min-width: 280px;
-    margin: 0 auto;
-  }
-
-  .table-1 {
-    overflow-x: auto; 
-    display: block; 
-  }
-
-  .table-1 table {
-    width: 100%; /* Asigură că tabelul se ajustează la dimensiunea containerului */
-  }
-
-  table th,
-  table td {
-    padding: 5px;
-    font-size: 12px; /* Diminuează dimensiunea fontului pentru a fi mai compact */
-  }
-}
-
-
-      
-
-      /* Adjustments for larger screens (laptops and PCs) */
-      @media (min-width: 1024px) {
-        p {
-          font-size: 18px; /* Increase font size for better readability */
+      @media (max-width: 768px) {
+        .table-container {
+          max-width: 70%;
+          min-width: 280px;
+          margin: 0 auto;
         }
 
-        ul h2 {
-          font-size: 24px;
+        .table-1 {
+          overflow-x: auto;
+          display: block;
         }
 
-        ul li {
-          font-size: 18px;
-        }
-
-        header h1 {
-          font-size: 28px;
+        .table-1 table {
+          width: 100%;
         }
 
         table th,
         table td {
           padding: 5px;
-          font-size: 14px;
-        }
-
-        footer p {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
 
+      /* Footer adjustments */
       @media (min-width: 1440px) {
-        body h1 {
-          font-size: 50px;
-        }
-        p {
-          font-size: 20px; /* Further increase font size for large screens */
-        }
-
-        ul h2 {
-          font-size: 50px;
-          margin-bottom: 50px;
+        footer .contact-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 50px;
+          margin-bottom: 20px;
+          text-align: center;
         }
 
-        ul li {
-          font-size: 40px;
-          margin-bottom: 80px;
-          display: inline-block;
-          margin-left: 50px;
+        footer .contact-info div {
+          flex: 1;
         }
 
-        ul img {
-          margin-top: 40px;
-          max-width: 500px;
+        footer .contact-info h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
         }
 
-        header h1 {
-          font-size: 32px;
-        }
-        table {
-          width: 70%; /* Ensure table fits within small screens */
+        footer .contact-info p {
+          margin: auto;
+          padding: 0;
         }
 
-        .list-gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        .gallery {
-          
-          max-width: 300px;
-        }
-
-
-        .partners-list{
-          display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-
-         ul img {
-          border: none;
-         }
-
-        footer p {
+        footer .copyright {
+          margin-top: 30px;
           font-size: 12px;
+          text-align: center;
         }
       }
     </style>
   </head>
   <body>
-    <img src="./image/logo_smartmoving.png" alt="" />
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <img src="./image/logo_smartmoving.png" alt="SmartMoving Logo" />
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Despre Noi</a></li>
+          <li><a href="#">Servicii</a></li>
+          <li><a href="#">Resurse</a></li>
+          <li><a href="#">Galerie</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+
+    <!-- Mobile menu (when active) -->
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="close-btn" onclick="toggleMenu()">&times;</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Despre Noi</a></li>
+        <li><a href="#">Servicii</a></li>
+        <li><a href="#">Resurse</a></li>
+        <li><a href="#">Galerie</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
     <h1>SmartMoving Logistic Emails</h1>
     <p>
       <b>Smartmoving Logistics</b> is a trusted moving company with over
-      <b>15 years of experience</b>
-      in the industry. We provide <b>comprehensive</b> moving services,
+      <b>15 years of experience</b> in the industry. We provide
+      <b>comprehensive</b> moving services,
       <b>both locally and internationally</b>, ensuring the safe and efficient
       relocation of your belongings. Our fleet includes a wide range of vehicles
       of all sizes and types, allowing us to handle any moving challenge. We
@@ -296,6 +351,7 @@
       more about our services and receive a free estimate.
     </p>
 
+    <!-- Service table -->
     <div class="table-container">
       <table class="table-1" border="1" cellpadding="5" cellspacing="0">
         <tr>
@@ -400,6 +456,7 @@
       </table>
     </div>
 
+    <!-- Gallery -->
     <ul class="list-gallery">
       <li><img class="gallery" src="./image/1.png" alt="" /></li>
       <li><img class="gallery" src="./image/2.png" alt="" /></li>
@@ -411,54 +468,76 @@
       <li><img class="gallery" src="./image/8.png" alt="" /></li>
     </ul>
 
+    <!-- Partners -->
     <div class="partners">
       <h2>Our Clients</h2>
       <ul class="partners-list">
         <li><img src="./firme partenere/client-1.png" alt="" /></li>
         <li><img src="./firme partenere/client-8.png" alt="" /></li>
-        <li> <img src="./firme partenere/client-5.png" alt="" /></li>
+        <li><img src="./firme partenere/client-5.png" alt="" /></li>
         <li>
-          
           <img
             src="./firme partenere/santa-fe-relocation-services-srl-bucharest.jpg"
             alt=""
-            srcset=""
           />
         </li>
-        <li>
-         <img src="./firme partenere/mobile_logo.png" alt="" />
-        </li>
-        <li>
-          
-          <img src="./firme partenere/Logistik-Icon.png" alt="" />
-        </li>
-        <li>
-           <img src="./firme partenere/nobilia-Logo-400x.png" alt="" />
-        </li>
-        <li> <img src="./firme partenere/images.png" alt="" /></li>
-        <li> <img src="./firme partenere/image.png" alt="" /></li>
-        <li>
-           <img src="./firme partenere/deloitte-logo-1.jpg" alt="" />
-        </li>
+        <li><img src="./firme partenere/mobile_logo.png" alt="" /></li>
+        <li><img src="./firme partenere/Logistik-Icon.png" alt="" /></li>
+        <li><img src="./firme partenere/nobilia-Logo-400x.png" alt="" /></li>
+        <li><img src="./firme partenere/images.png" alt="" /></li>
+        <li><img src="./firme partenere/image.png" alt="" /></li>
+        <li><img src="./firme partenere/deloitte-logo-1.jpg" alt="" /></li>
         <li><img src="./firme partenere/logo_eon1.png" alt="" /></li>
-        <li> <img src="./firme partenere/client-4.png" alt="" /></li>
+        <li><img src="./firme partenere/client-4.png" alt="" /></li>
       </ul>
     </div>
 
+    <!-- Footer -->
     <footer>
       <h1>CONTACT</h1>
-      <h2>Adresa</h2>
-      <a style="color: white;" href="https://maps.app.goo.gl/Ff4fkYPvE5TGwKGu7">400683 Strada Câmpului nr.251, Cluj-Napoca, România.</p></a><p>
-      <h2>Numar Telefon</h2>
-      <p><a style="color: white;" href="tel:+40738.130.703">+40738.130.703</a></p>
-      <p><a style="color: white;" href="tel:+40740.835.055">+40740.835.055</a></p>
-      <h2>Email</h2>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=office@smartmoving.eu" target="_blank" style="color: white;">office@smartmoving.eu</a>
-
-      <p>
-        © Copyright Smartmoving Logistics. All Rights Reserved Made by
+      <div class="contact-info">
+        <div>
+          <h2>Adresa</h2>
+          <p>
+            <a style="color: white" href="#"
+              >400683 Strada Câmpului nr.251, Cluj-Napoca, România.</a
+            >
+          </p>
+        </div>
+        <div>
+          <h2>Numar Telefon</h2>
+          <p>
+            <a style="color: white" href="tel:+40738.130.703">+40738.130.703</a>
+          </p>
+          <p>
+            <a style="color: white" href="tel:+40740.835.055">+40740.835.055</a>
+          </p>
+        </div>
+        <div>
+          <h2>Email</h2>
+          <p>
+            <a style="color: white" href="mailto:office@smartmoving.eu"
+              >office@smartmoving.eu</a
+            >
+          </p>
+        </div>
+      </div>
+      <p class="copyright">
+        © Copyright Smartmoving Logistics. All Rights Reserved. Made by
         OvidiuMaier & PaulBud
       </p>
     </footer>
+
+    <!-- JS for mobile menu -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("mobile-menu");
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
